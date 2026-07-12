@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>📖 Manual do Sistema de Gestão Universal</title>
+    <title>📖 Manual CyvroTech PDV^IA</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -21,16 +21,16 @@
         }
 
         :root {
-            --primary: #3b82f6;
-            --primary-dark: #2563eb;
-            --primary-light: #93c5fd;
-            --secondary: #8b5cf6;
+            --primary: #00D4FF;
+            --primary-dark: #0099CC;
+            --primary-light: #66E5FF;
+            --secondary: #7C3AED;
             --success: #10b981;
             --warning: #f59e0b;
             --danger: #ef4444;
             --info: #06b6d4;
-            --dark: #0f172a;
-            --dark-secondary: #1e293b;
+            --dark: #0A0E1A;
+            --dark-secondary: #1A1F35;
             --gray: #64748b;
             --gray-light: #e2e8f0;
             --gray-bg: #f1f5f9;
@@ -39,6 +39,7 @@
             --radius: 16px;
             --radius-sm: 10px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gold: #FFD700;
         }
 
         html {
@@ -63,11 +64,11 @@
             background: var(--gray-bg);
         }
         ::-webkit-scrollbar-thumb {
-            background: var(--gray);
+            background: var(--primary);
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary);
+            background: var(--primary-dark);
         }
 
         /* ============================================
@@ -97,23 +98,31 @@
         }
 
         .top-bar .logo i {
-            color: var(--primary-light);
+            color: var(--primary);
             font-size: 1.8rem;
         }
 
         .top-bar .logo span {
-            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        .top-bar .logo small {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--gray);
+            background: none;
+            -webkit-text-fill-color: var(--gray);
+        }
+
         .top-bar .version {
             font-size: 0.7rem;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 212, 255, 0.15);
             padding: 4px 12px;
             border-radius: 20px;
-            color: var(--gray-light);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--primary);
+            border: 1px solid rgba(0, 212, 255, 0.1);
         }
 
         .top-bar .search-box {
@@ -132,7 +141,7 @@
         .top-bar .search-box:focus-within {
             background: rgba(255, 255, 255, 0.15);
             border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+            box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.15);
         }
 
         .top-bar .search-box input {
@@ -181,12 +190,13 @@
 
         .top-bar .actions .btn-print {
             background: var(--primary);
-            color: white !important;
+            color: var(--dark) !important;
             border: none !important;
+            font-weight: 700;
         }
 
         .top-bar .actions .btn-print:hover {
-            background: var(--primary-dark);
+            background: var(--primary-light);
         }
 
         /* ============================================
@@ -208,6 +218,7 @@
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             margin-bottom: 32px;
+            border-top: 4px solid var(--primary);
         }
 
         .manual-header .icon {
@@ -220,6 +231,12 @@
             font-size: 2.8rem;
             font-weight: 900;
             background: linear-gradient(135deg, var(--dark), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .manual-header h1 .ia {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -249,6 +266,11 @@
             font-weight: 600;
         }
 
+        .badge-cyvro {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(124, 58, 237, 0.15));
+            color: var(--primary-dark);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
         .badge-blue {
             background: #dbeafe;
             color: #1e40af;
@@ -269,6 +291,11 @@
             background: #fee2e2;
             color: #991b1b;
         }
+        .badge-gold {
+            background: rgba(255, 215, 0, 0.15);
+            color: #B45309;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
 
         /* ============================================
                    ÍNDICE
@@ -279,6 +306,7 @@
             padding: 28px 32px;
             box-shadow: var(--shadow);
             margin-bottom: 32px;
+            border-left: 4px solid var(--primary);
         }
 
         .toc h2 {
@@ -289,6 +317,10 @@
             gap: 10px;
             margin-bottom: 16px;
             color: var(--dark);
+        }
+
+        .toc h2 i {
+            color: var(--primary);
         }
 
         .toc-grid {
@@ -344,6 +376,10 @@
             background: #ede9fe;
             color: #5b21b6;
         }
+        .tag-cyvro {
+            background: rgba(0, 212, 255, 0.15);
+            color: var(--primary-dark);
+        }
 
         /* ============================================
                    SEÇÕES
@@ -355,6 +391,11 @@
             box-shadow: var(--shadow);
             margin-bottom: 32px;
             scroll-margin-top: 80px;
+            border: 1px solid var(--gray-light);
+        }
+
+        .section:hover {
+            border-color: var(--primary);
         }
 
         .section-header {
@@ -378,8 +419,8 @@
         }
 
         .icon-primary {
-            background: #dbeafe;
-            color: var(--primary);
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--primary-dark);
         }
         .icon-success {
             background: #d1fae5;
@@ -404,6 +445,10 @@
         .icon-dark {
             background: var(--gray-bg);
             color: var(--dark);
+        }
+        .icon-gold {
+            background: rgba(255, 215, 0, 0.15);
+            color: #B45309;
         }
 
         .section-header h2 {
@@ -547,7 +592,7 @@
         }
 
         table tr:hover td {
-            background: rgba(59, 130, 246, 0.03);
+            background: rgba(0, 212, 255, 0.03);
         }
 
         /* ============================================
@@ -642,9 +687,9 @@
         }
 
         .callout-info {
-            background: #eff6ff;
+            background: rgba(0, 212, 255, 0.05);
             border-color: var(--primary);
-            color: #1e3a5f;
+            color: var(--dark-secondary);
         }
 
         .callout-warning {
@@ -663,6 +708,113 @@
             background: #ecfdf5;
             border-color: var(--success);
             color: #064e3b;
+        }
+
+        .callout-cyvro {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(124, 58, 237, 0.05));
+            border-color: var(--secondary);
+            color: var(--dark-secondary);
+        }
+
+        /* ============================================
+                   FOOTER (ATUALIZADO)
+                   ============================================ */
+        .footer-manual {
+            margin-top: 40px;
+            padding: 40px 0 24px;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+            border-radius: var(--radius);
+            color: var(--gray);
+        }
+
+        .footer-manual .footer-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .footer-manual .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .footer-manual .footer-brand i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .footer-manual .footer-brand span {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-manual .footer-brand small {
+            font-size: 0.8rem;
+            color: var(--gray);
+            -webkit-text-fill-color: var(--gray);
+        }
+
+        .footer-manual .footer-divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            margin: 12px auto 16px;
+            border-radius: 2px;
+        }
+
+        .footer-manual p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            margin: 4px 0;
+        }
+
+        .footer-manual .footer-highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .footer-manual .footer-highlight-ia {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .footer-manual .footer-credits {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-manual .footer-credits span {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .footer-manual .footer-credits .heart {
+            color: #ef4444;
+        }
+
+        .footer-manual .footer-credits a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-manual .footer-credits a:hover {
+            color: var(--primary-light);
         }
 
         /* ============================================
@@ -729,6 +881,12 @@
             .flow-arrow {
                 transform: rotate(90deg);
             }
+
+            .footer-manual .footer-credits {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -750,6 +908,10 @@
 
             .top-bar .logo {
                 font-size: 1.1rem;
+            }
+
+            .footer-manual .footer-brand span {
+                font-size: 1.2rem;
             }
         }
 
@@ -802,6 +964,17 @@
             .no-print {
                 display: none !important;
             }
+            .footer-manual {
+                background: #f8f9fa !important;
+                color: #333 !important;
+                border-top: 2px solid #ddd;
+            }
+            .footer-manual .footer-brand span {
+                -webkit-text-fill-color: #333 !important;
+            }
+            .footer-manual .footer-highlight-ia {
+                -webkit-text-fill-color: #333 !important;
+            }
         }
     </style>
 </head>
@@ -812,9 +985,12 @@
     ============================================ -->
     <header class="top-bar no-print">
         <div class="logo">
-            <i class="fas fa-cubes"></i>
-            <span>Manual do Sistema</span>
-            <span class="version">v4.0</span>
+            <i class="fas fa-cash-register"></i>
+            <div>
+                <span>CyvroTech</span>
+                <small>PDV<sup>IA</sup></small>
+            </div>
+            <span class="version"><i class="fas fa-robot"></i> v4.0</span>
         </div>
 
         <div class="search-box">
@@ -838,14 +1014,16 @@
         ============================================ -->
         <div class="manual-header">
             <div class="icon">📖</div>
-            <h1>Manual do Sistema de Gestão Universal</h1>
-            <p>Guia completo para utilizar todas as funcionalidades do sistema</p>
+            <h1>Manual do Sistema <span class="ia">CyvroTech PDV<sup>IA</sup></span></h1>
+            <p>Guia completo para utilizar todas as funcionalidades do sistema com inteligência artificial</p>
             <div class="badges">
+                <span class="badge badge-cyvro"><i class="fas fa-cube"></i> CyvroTech</span>
                 <span class="badge badge-blue"><i class="fas fa-check-circle"></i> 80+ Funcionalidades</span>
                 <span class="badge badge-green"><i class="fas fa-rocket"></i> 20+ Módulos</span>
                 <span class="badge badge-purple"><i class="fas fa-robot"></i> IA Integrada</span>
                 <span class="badge badge-orange"><i class="fas fa-shield-alt"></i> Seguro</span>
                 <span class="badge badge-red"><i class="fas fa-bolt"></i> Offline</span>
+                <span class="badge badge-gold"><i class="fas fa-star"></i> Desenfultec IA</span>
             </div>
         </div>
 
@@ -886,21 +1064,21 @@
             <div class="section-header">
                 <div class="icon icon-primary"><i class="fas fa-home"></i></div>
                 <h2>Introdução</h2>
-                <span class="badge-section badge-blue">Visão Geral</span>
+                <span class="badge-section badge-cyvro">CyvroTech</span>
             </div>
 
             <p>
-                O <strong>Sistema de Gestão Universal</strong> é uma plataforma completa para gerenciamento de
+                O <strong>CyvroTech PDV<sup>IA</sup></strong> é uma plataforma completa para gerenciamento de
                 pequenos e médios negócios. Ele integra todas as áreas essenciais do seu estabelecimento
-                em uma única interface moderna e intuitiva.
+                em uma única interface moderna e intuitiva, com o poder da <strong>Inteligência Artificial</strong>.
             </p>
 
             <div class="illustration">
                 <div class="preview">
                     <div class="mock">
                         <div class="mock-header">
-                            <span>📊 SISTEMA GESTÃO</span>
-                            <span><i class="fas fa-circle" style="color:#10b981;"></i> Online</span>
+                            <span>📊 CYVROTECH PDV<sup>IA</sup></span>
+                            <span><i class="fas fa-circle" style="color:#10b981;"></i> IA Ativa</span>
                         </div>
                         <div class="mock-row"><span>💰 Vendas Hoje</span><span style="color:#10b981;">R$ 1.247,50</span></div>
                         <div class="mock-row"><span>👥 Clientes</span><span>156</span></div>
@@ -918,11 +1096,10 @@
                 </div>
             </div>
 
-            <div class="callout callout-success">
-                <i class="fas fa-lightbulb"></i>
+            <div class="callout callout-cyvro">
+                <i class="fas fa-robot"></i>
                 <div>
-                    <strong>Dica:</strong> Use o botão de ajuda (❓) em cada módulo para dicas específicas.
-                    O sistema também possui um <strong>Assistente IA</strong> que responde perguntas em linguagem natural!
+                    <strong>🤖 CyvroTech IA:</strong> O sistema possui um <strong>Assistente IA</strong> que responde perguntas em linguagem natural, gera previsões e sugere ações para maximizar seus resultados!
                 </div>
             </div>
         </div>
@@ -1063,7 +1240,7 @@
                         <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin:8px 0;">
                             <div style="background:#eff6ff; border-radius:8px; padding:8px; text-align:center;">
                                 <div style="font-size:0.7rem;color:var(--gray);">Vendas</div>
-                                <div style="font-weight:700;color:var(--primary);">R$ 1.247,50</div>
+                                <div style="font-weight:700;color:var(--primary-dark);">R$ 1.247,50</div>
                             </div>
                             <div style="background:#ecfdf5; border-radius:8px; padding:8px; text-align:center;">
                                 <div style="font-size:0.7rem;color:var(--gray);">Clientes</div>
@@ -1196,14 +1373,14 @@
                         <div style="border:1px solid var(--gray-light); border-radius:6px; padding:8px; margin:6px 0; background:#eff6ff;">
                             <div style="display:flex; justify-content:space-between; font-weight:600;">
                                 <span>#42 - João</span>
-                                <span style="color:var(--primary);">R$ 78,00</span>
+                                <span style="color:var(--primary-dark);">R$ 78,00</span>
                             </div>
                             <div style="font-size:0.75rem; color:var(--gray);">2x Hambúrguer • 1x Refrigerante</div>
                         </div>
                         <div style="border:1px solid var(--gray-light); border-radius:6px; padding:8px; margin:6px 0;">
                             <div style="display:flex; justify-content:space-between; font-weight:600;">
                                 <span>#43 - Maria</span>
-                                <span style="color:var(--primary);">R$ 32,00</span>
+                                <span style="color:var(--primary-dark);">R$ 32,00</span>
                             </div>
                             <div style="font-size:0.75rem; color:var(--gray);">1x Porção • 1x Suco</div>
                         </div>
@@ -1253,7 +1430,7 @@
                         </div>
                         <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin:8px 0;">
                             <div style="background:#f1f5f9; border-radius:6px; padding:6px; text-align:center;">
-                                <div style="font-weight:700; color:var(--primary);">45</div>
+                                <div style="font-weight:700; color:var(--primary-dark);">45</div>
                                 <div style="font-size:0.65rem;color:var(--gray);">Total Itens</div>
                             </div>
                             <div style="background:#f1f5f9; border-radius:6px; padding:6px; text-align:center;">
@@ -1288,7 +1465,7 @@
                 <span style="background:#e2e8f0; padding:4px 16px; border-radius:12px; font-weight:600; color:#475569;">C - 10% do valor</span>
             </div>
 
-            <div class="callout callout-info">
+            <div class="callout callout-cyvro">
                 <i class="fas fa-robot"></i>
                 <div>
                     <strong>IA no Estoque:</strong> O sistema usa IA para sugerir preços otimizados
@@ -1443,11 +1620,11 @@
                 </div>
                 <div style="background:var(--gray-bg); padding:12px; border-radius:var(--radius-sm); text-align:center;">
                     <div style="font-size:0.75rem;color:var(--gray);">Lucro</div>
-                    <div style="font-weight:700;color:var(--primary);">R$ 4.220,00</div>
+                    <div style="font-weight:700;color:var(--primary-dark);">R$ 4.220,00</div>
                 </div>
                 <div style="background:var(--gray-bg); padding:12px; border-radius:var(--radius-sm); text-align:center;">
                     <div style="font-size:0.75rem;color:var(--gray);">Margem</div>
-                    <div style="font-weight:700;color:var(--primary);">33.9%</div>
+                    <div style="font-weight:700;color:var(--primary-dark);">33.9%</div>
                 </div>
             </div>
         </div>
@@ -1476,7 +1653,7 @@
                         </div>
                         <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; margin:8px 0;">
                             <div style="background:#f1f5f9; border-radius:6px; padding:6px; text-align:center;">
-                                <div style="font-weight:700; color:var(--primary);">45</div>
+                                <div style="font-weight:700; color:var(--primary-dark);">45</div>
                                 <div style="font-size:0.65rem;color:var(--gray);">Clientes</div>
                             </div>
                             <div style="background:#f1f5f9; border-radius:6px; padding:6px; text-align:center;">
@@ -1520,7 +1697,7 @@
         ============================================ -->
         <div class="section" id="fidelidade">
             <div class="section-header">
-                <div class="icon icon-warning"><i class="fas fa-crown"></i></div>
+                <div class="icon icon-gold"><i class="fas fa-crown"></i></div>
                 <h2>Fidelidade</h2>
                 <span class="badge-section badge-orange">⭐ Programa</span>
             </div>
@@ -1648,7 +1825,7 @@
                                 <div style="font-size:0.7rem;color:var(--gray);">Receita</div>
                             </div>
                             <div style="background:#f1f5f9; border-radius:6px; padding:8px; text-align:center;">
-                                <div style="font-weight:700; color:var(--primary);">R$ 85,30</div>
+                                <div style="font-weight:700; color:var(--primary-dark);">R$ 85,30</div>
                                 <div style="font-size:0.7rem;color:var(--gray);">Ticket Médio</div>
                             </div>
                         </div>
@@ -1671,7 +1848,7 @@
             <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:12px; margin:12px 0;">
                 <div style="background:#eff6ff; padding:12px; border-radius:var(--radius-sm); border-left:4px solid var(--primary);">
                     <div style="font-weight:600;">📈 Tendência</div>
-                    <div style="color:var(--primary);">Crescente 12.5%</div>
+                    <div style="color:var(--primary-dark);">Crescente 12.5%</div>
                 </div>
                 <div style="background:#eff6ff; padding:12px; border-radius:var(--radius-sm); border-left:4px solid var(--success);">
                     <div style="font-weight:600;">🔮 Previsão</div>
@@ -1811,7 +1988,7 @@
                         </div>
                         <div style="display:flex; gap:8px; margin-top:8px;">
                             <input style="flex:1; padding:8px 12px; border:1px solid var(--gray-light); border-radius:8px; font-size:0.85rem;" placeholder="Pergunte algo..." />
-                            <button style="background:var(--primary); color:white; border:none; padding:8px 16px; border-radius:8px;">Enviar</button>
+                            <button style="background:var(--primary); color:var(--dark); border:none; padding:8px 16px; border-radius:8px; font-weight:700;">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -1826,7 +2003,7 @@
                 </div>
             </div>
 
-            <div class="callout callout-success">
+            <div class="callout callout-cyvro">
                 <i class="fas fa-lightbulb"></i>
                 <div>
                     <strong>Dica:</strong> O Assistente IA está disponível em todo o sistema
@@ -1984,7 +2161,7 @@
             <div style="display:flex; flex-direction:column; gap:12px;">
                 <div style="background:var(--gray-bg); border-radius:var(--radius-sm); padding:16px;">
                     <div style="font-weight:700; display:flex; gap:8px; align-items:center;">
-                        <span style="background:var(--primary); color:white; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem;">Q</span>
+                        <span style="background:var(--primary); color:var(--dark); border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700;">Q</span>
                         Posso usar o sistema sem internet?
                     </div>
                     <div style="color:var(--gray); margin-top:8px; padding-left:32px;">
@@ -1994,7 +2171,7 @@
 
                 <div style="background:var(--gray-bg); border-radius:var(--radius-sm); padding:16px;">
                     <div style="font-weight:700; display:flex; gap:8px; align-items:center;">
-                        <span style="background:var(--primary); color:white; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem;">Q</span>
+                        <span style="background:var(--primary); color:var(--dark); border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700;">Q</span>
                         Como faço backup automático?
                     </div>
                     <div style="color:var(--gray); margin-top:8px; padding-left:32px;">
@@ -2004,7 +2181,7 @@
 
                 <div style="background:var(--gray-bg); border-radius:var(--radius-sm); padding:16px;">
                     <div style="font-weight:700; display:flex; gap:8px; align-items:center;">
-                        <span style="background:var(--primary); color:white; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem;">Q</span>
+                        <span style="background:var(--primary); color:var(--dark); border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700;">Q</span>
                         Como configurar comissões?
                     </div>
                     <div style="color:var(--gray); margin-top:8px; padding-left:32px;">
@@ -2014,7 +2191,7 @@
 
                 <div style="background:var(--gray-bg); border-radius:var(--radius-sm); padding:16px;">
                     <div style="font-weight:700; display:flex; gap:8px; align-items:center;">
-                        <span style="background:var(--primary); color:white; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem;">Q</span>
+                        <span style="background:var(--primary); color:var(--dark); border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700;">Q</span>
                         O sistema é seguro?
                     </div>
                     <div style="color:var(--gray); margin-top:8px; padding-left:32px;">
@@ -2024,7 +2201,7 @@
 
                 <div style="background:var(--gray-bg); border-radius:var(--radius-sm); padding:16px;">
                     <div style="font-weight:700; display:flex; gap:8px; align-items:center;">
-                        <span style="background:var(--primary); color:white; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem;">Q</span>
+                        <span style="background:var(--primary); color:var(--dark); border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700;">Q</span>
                         Como funciona o split payment?
                     </div>
                     <div style="color:var(--gray); margin-top:8px; padding-left:32px;">
@@ -2034,7 +2211,7 @@
 
                 <div style="background:var(--gray-bg); border-radius:var(--radius-sm); padding:16px;">
                     <div style="font-weight:700; display:flex; gap:8px; align-items:center;">
-                        <span style="background:var(--primary); color:white; border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem;">Q</span>
+                        <span style="background:var(--primary); color:var(--dark); border-radius:50%; width:24px; height:24px; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700;">Q</span>
                         Posso ter múltiplas filiais?
                     </div>
                     <div style="color:var(--gray); margin-top:8px; padding-left:32px;">
@@ -2045,25 +2222,102 @@
         </div>
 
         <!-- ============================================
-        RODAPÉ
+        FOOTER - CYVROTECH + DESENFULTEC IA + BRUNO RAGNER
         ============================================ -->
-        <div style="text-align:center; padding:24px 0 12px; color:var(--gray); font-size:0.85rem; border-top:1px solid var(--gray-light); margin-top:16px;">
-            <p>
-                <strong>📖 Manual do Sistema de Gestão Universal</strong><br>
-                Versão 4.0 • Última atualização: Julho 2026
-            </p>
-            <p style="font-size:0.75rem;">
-                © 2026 CYROTECH SOLUÇÕES - Todos os direitos reservados
-            </p>
-            <div style="display:flex; justify-content:center; gap:16px; margin-top:8px; flex-wrap:wrap;">
-                <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;" style="color:var(--primary); text-decoration:none;">
-                    <i class="fas fa-arrow-up"></i> Voltar ao topo
-                </a>
-                <a href="#" onclick="window.print(); return false;" style="color:var(--primary); text-decoration:none;">
-                    <i class="fas fa-print"></i> Imprimir
-                </a>
-            </div>
+        <footer class="footer-manual">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-cash-register"></i>
+                    <span>CyvroTech</span>
+                    <small>PDV<sup>IA</sup></small>
+                </div>
+                <div class="footer-divider"></div>
+
+                <p>
+                    <strong>Manual do Sistema CyvroTech PDV<sup>IA</sup></strong>
+                </p>
+                <p>
+                    <span class="footer-highlight">Desenvolvido e mantido pela CyvroTech</span>
+                </p>
+                <p>
+                    <span class="footer-highlight-ia">
+                        <i class="fas fa-robot"></i> Inteligência Artificial por Desenfultec IA
+                    </span>
+                </p>
+                <p style="font-size:0.85rem; color:var(--gray);">
+                    <i class="fas fa-code"></i> Desenvolvido por <strong style="color:var(--primary);">Bruno Ragner</strong>
+                </p>
+
+                <div class="footer-credits">
+                    <span>📖 Versão 4.0</span>
+                    <span>📅 Julho 2026</span>
+                    <span>🔒 <i class="fas fa-shield-alt"></i> Seguro</span>
+                    <span>🤖 <i class="fas fa-brain"></i> IA Integrada</span>
+                    <span>
+                        <i class="fas fa-heart heart"></i>
+                        <a href="#" onclick="alert('CyvroTech - Tecnologia com Inteligência Artificial')">
+                            CyvroTech
+                        </a>
+                    </span>
+                    <span>
+                        <i class="fas fa-robot"></i>
+                        <a href="#" onclick="alert('Desenfultec IA - Inteligência Artificial Aplicada')">
+                            CYvrotech IA
+                        </a>
+                    </span>
+                    <span>
+                        <i class="fas fa-user-cog"></i>
+                        <a href="#" onclick="alert('Bruno Ragner - Desenvolvedor Full Stack')">
+                            Bruno Ragner
+                        </a>
+                    </span>
+                </div>
+
+                <div style="margin-top:12px; font-size:0.7rem; color:var(--gray);">
+                    © 2026 CyvroTech - Todos os direitos reservados
+                </div>
+                <!-- ============================================
+SUPORTE
+============================================ -->
+<div class="section" id="suporte">
+    <div class="section-header">
+        <div class="icon icon-success"><i class="fab fa-whatsapp"></i></div>
+        <h2>Suporte CyvroTech</h2>
+        <span class="badge-section badge-green">📱 24h</span>
+    </div>
+
+    <p>
+        Precisa de ajuda? Nossa equipe de suporte está disponível para atender você!
+    </p>
+
+    <div style="display:flex; gap:20px; flex-wrap:wrap; margin:20px 0; justify-content:center;">
+        <a href="https://wa.me/5584991612793" target="_blank" 
+           style="display:inline-flex; align-items:center; gap:12px; padding:16px 32px; background:#25D366; color:white; border-radius:50px; text-decoration:none; font-weight:700; font-size:18px; box-shadow:0 4px 20px rgba(37,211,102,0.3); transition:all 0.3s;">
+            <i class="fab fa-whatsapp" style="font-size:24px;"></i>
+            (84) 99161-2793
+        </a>
+        <a href="mailto:suporte@cyvrotech.com" 
+           style="display:inline-flex; align-items:center; gap:12px; padding:16px 32px; background:#EA4335; color:white; border-radius:50px; text-decoration:none; font-weight:700; font-size:18px; box-shadow:0 4px 20px rgba(234,67,53,0.3); transition:all 0.3s;">
+            <i class="fas fa-envelope" style="font-size:20px;"></i>
+            suporte@cyvrotech.com
+        </a>
+    </div>
+
+    <div style="text-align:center; color:var(--gray); font-size:0.9rem;">
+        <p><strong>Horário de Atendimento:</strong> Segunda a Sexta, 08h às 18h</p>
+        <p><i class="fas fa-clock"></i> Resposta em até 2 horas úteis</p>
+    </div>
+
+    <div class="callout callout-success">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+            <strong>📱 Atendimento via WhatsApp:</strong>
+            Clique no botão acima ou escaneie o QR Code para falar diretamente com nossa equipe.
         </div>
+    </div>
+</div>
+            </div>
+        </footer>
 
     </div>
     <!-- FIM CONTAINER -->
@@ -2134,7 +2388,6 @@
                         const topOffset = 80;
                         const y = target.getBoundingClientRect().top + window.pageYOffset - topOffset;
                         window.scrollTo({ top: y, behavior: 'smooth' });
-                        // Fecha a busca no mobile
                         const searchInput = document.getElementById('searchInput');
                         if (searchInput) searchInput.blur();
                     }
@@ -2165,7 +2418,7 @@
                 link.style.color = 'var(--gray)';
                 if (link.getAttribute('href') === '#' + current) {
                     link.style.fontWeight = '700';
-                    link.style.color = 'var(--primary)';
+                    link.style.color = 'var(--primary-dark)';
                 }
             });
         }
@@ -2194,9 +2447,10 @@
                 }
             });
 
-            // Mostra contagem de seções
             const totalSections = sections.length;
-            console.log(`📖 Manual carregado: ${totalSections} seções disponíveis`);
+            console.log(`📖 Manual CyvroTech carregado: ${totalSections} seções disponíveis`);
+            console.log('🤖 IA por Desenfultec IA');
+            console.log('👨‍💻 Desenvolvido por Bruno Ragner');
         });
     </script>
 
